@@ -9,7 +9,6 @@ class TileMap {
     unsigned int tid;
     int width, height;
     unsigned char* map;
-    std::vector<Objeto> objetos;
 
 public:
     TileMap(int w, int h, unsigned char initWith, float z = 0.0f) {
@@ -38,13 +37,7 @@ public:
     void setZ(float z) { this->z = z; }
     void setTid(int tid) { this->tid = tid; }
 
-    void addObjeto(const Objeto& objeto) {
-        objetos.push_back(objeto);
-    }
 
-    const std::vector<Objeto>& getObjetos() const {
-        return objetos;
-    }
 };
 
 #endif // TILEMAP_H
